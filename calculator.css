@@ -1,0 +1,70 @@
+#bodyCalculator {
+    display: flex;
+    background-color: red;
+    width: 500px;
+    height: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#display {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(199, 199, 199);
+}
+
+#operationBoardTop {
+    height: 100px;
+    width: 100%; 
+    background-color: pink;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+.symbolButtons {
+    background-color: rgb(219, 223, 185);
+    flex: 1 1 calc(33% - 30px);
+    font-size: 20px;
+}
+
+.operationButtons, #clearButton {
+    background-color: rgb(201, 201, 201);
+    flex: 0 1 30%;
+    margin: 0px 10px;
+    font-size: 20px;
+}
+
+#symbolBoard {
+    display: flex;
+    flex: 2 1 0;
+    background-color: purple;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+#operationBoardRight {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(192, 255, 192);
+    box-sizing: border-box;
+}
+
+#numberSymbolDivision {
+    display: flex;
+    flex: 1 1 0;
+}
