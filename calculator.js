@@ -22,10 +22,18 @@ symbolButtons.forEach(button => {
             nextOperator !== "=" && display.append(`${result.toString()}${nextOperator.toString()}`)
         }
         else if (numberList.length === 4 && display.innerText[0] === "-") {
-                number1 = parseInt(numberList[1])
-                number2 = parseInt(numberList[2])
-            }                  
-        
+                number1 = -parseInt(numberList[1])
+            number2 = parseInt(numberList[2])
+
+            operator = display.textContent.slice(1).split("").find((value) => "+-*/".includes(value))
+            nextOperator = display.textContent[display.textContent.length -1]
+
+            let result = operate(number1, number2, operator)
+
+            display.innerText = ""
+            nextOperator === "=" && display.append(`${result.toString()}`)
+            nextOperator !== "=" && display.append(`${result.toString()}${nextOperator.toString()}`)
+        }                  
         else {
 
         }     
